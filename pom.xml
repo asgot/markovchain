@@ -10,6 +10,12 @@
   <name>markovchain</name>
   <url>http://asgot.net</url>
 
+  <scm>
+    <connection>scm:git:ssh://github.com/asgot/markovchain.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/asgot/markovchain.git</developerConnection>
+    <url>https://github.com/asgot/markovchain</url>
+  </scm>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
@@ -42,4 +48,12 @@
       </plugin>
     </plugins>
   </build>
+
+  <distributionManagement>
+    <repository>
+      <id>internal.repo</id>
+      <name>Temporary Staging Repository</name>
+      <url>file://${project.build.directory}/mvn-repo</url>
+    </repository>
+  </distributionManagement>
 </project>
